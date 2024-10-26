@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description"/>
+		<meta name="keywords"/>
+		<title>Home page</title>
+		<!-- Google font -->
+		<link
+		href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link
+		type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+	</head>
+
+	<body>
+		<div id="booking" class="section" style="background-image: url('{% static 'img/bg.jpg' %}');">
+			<div class="section-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7 col-md-push-5">
+							<div class="booking-cta">
+								<h1>Prediksi
+									<br>
+									Kanker Payudara</h1>
+								<p>Website ini didedikasikan untuk memberikan informasi dan prediksi mengenai kanker payudara, suatu kondisi medis yang serius yang mempengaruhi jaringan payudara. Kanker payudara dapat terjadi pada pria maupun wanita, meskipun lebih umum terjadi pada wanita.</p>
+								<p>Perlu diingat bahwa prediksi yang diberikan oleh website ini bukanlah diagnosis medis yang pasti, tetapi dapat menjadi petunjuk awal untuk kesadaran tentang potensi risiko kanker payudara. Penting untuk berkonsultasi dengan dokter atau tenaga medis yang berkualifikasi untuk evaluasi yang lebih mendalam dan diagnosis yang akurat.</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-md-pull-7">
+							<div class="booking-form">
+								<form action="{% url 'result' %}" method="GET">
+
+
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="form-label">Your Name:</label>
+												<input id="name" class="form-control" type="text" placeholder="Enter your name" required/>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="form-label">Mean Radius:</label>
+												<input type="number" class="form-control" name="mean_radius" placeholder="Enter a value" required/>
+
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="form-label">Mean Texture:</label>
+												<input type="number" class="form-control" name="mean_texture" placeholder="Enter a value" required/>
+
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="form-label">Mean Perimeter:</label>
+												<input type="number" class="form-control" name="mean_perimeter" placeholder="Enter a value" required/>
+
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="form-label">Mean Area:</label>
+												<input type="number" class="form-control" name="mean_area" placeholder="Enter a value" required/>
+
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="form-label">Mean Smooth:</label>
+												<input type="number" class="form-control" name="mean_smoothness" placeholder="Enter a value" required/>
+
+											</div>
+										</div>
+									</div>
+									<div class="form-btn">
+										<button class="submit-btn">Get Predictions</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

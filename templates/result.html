@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description"/>
+		<meta name="keywords"/>
+		<title>Result</title>
+		<!-- Google font -->
+		<link
+		href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link
+		type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+	</head>
+	<body>
+		<div id="booking" class="section">
+			<div class="section-center">
+				<div class="container">
+					<div class="booking-form">
+
+						<div class="booking-cta" style="text-align: center;">
+							<h1 style="color:black;">Prediction</h1>
+
+							<p style="color:black;">
+								Result:
+								<strong>{{ result }}</strong>
+							</p>
+							<form action="{% url 'home' %}">
+								<input type="submit" value="Predict again" class="btn btn-primary btn-sm"/>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
